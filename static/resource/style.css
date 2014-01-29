@@ -1,0 +1,151 @@
+body {
+    background:url("images/bg/furley_bg.png");
+    font-family:sans-serif;
+    margin: 0;
+}
+
+p {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+
+body > .header {
+    background:url("images/bg/cartographer.png");
+    height: 150px;
+    width: 100%;
+    margin: 0 auto;
+    display: table;
+    position: relative;
+    z-index: 1;
+}
+
+.header-title {
+    font-size: 55px;
+    font-family: 'Voltaire', sans-serif;
+    color: #2194e5;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 150px;
+}
+
+.links-block {
+    height: 80px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+.links-menu {
+    box-shadow: 0 0 10px 5px #d0d0d0 !important;
+
+}
+
+.main-body {
+    margin-top: 35px;
+    height: 100%;
+    max-width: 60%;
+    min-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.main-body.long {
+    max-width: 90% !important;
+}
+.ui.piled.segment {
+    margin-bottom: 45px !important;
+}
+
+#videos-header {
+    min-height: 40px;
+    height: 170px;
+}
+
+#videos {
+  margin: 0 auto;
+}
+
+.tf2logo {
+    margin: auto;
+    display: block;
+}
+
+
+.ui.items .row .item, .ui.items .item {
+    width: 300px !important;
+    min-height: 150px !important;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2) !important;
+    border-bottom: 0.2em solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.ui.items .row .item.videos, .ui.items .item.videos {
+    font-size: 0.8em;
+    color: #5a5a5a;
+    padding: 0px;
+}
+
+.item.videos .thumbnail {
+    width: 97%;
+    border: 1px solid #ababab;
+    padding: 2px;
+    margin-top: 7px;
+}
+
+.item.videos .video-content {
+    padding: 0.5em;
+}
+
+.item.videos .video-stats {
+    background-color: #ededed;
+    font-weight: bold;
+    overflow: auto;
+    color: #757575;
+}
+
+
+.video-stats-left {
+    padding: 0.5em;
+    float: left;
+    border-right: 1px solid #c0c0c0;
+}
+
+.video-stats-right {
+    padding: 0.5em;
+    float: right;
+    border-left: 1px solid #c0c0c0;
+}
+
+.video-stats-image {
+    top: 1px;
+    position: relative;
+    float: right;
+    padding-left: 3px;
+}
+
+.video-stats-count {
+    float: left;
+}
+.item.videos {
+    margin: 8px !important;
+}
+
+.item a.name {
+    font-weight: bold;
+    font-size: 1.25em !important;
+}
+
+.item a.name .arrow.right.icon {
+    margin-left: 0px;
+    padding-right: 4px;
+}
+
+
+a {
+    color: #0077FF;
+    text-decoration: none;
+}
+a:visited { text-decoration: none; }
+a:active { text-decoration: none }
+a:hover { text-decoration: none; color: #0033CC; }

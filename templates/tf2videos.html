@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+    {% block head %}
+        {{ super() }}
+        <script type="text/javascript" src="/resource/jquery-masonry.min.js"></script>
+        <script type="text/javascript">
+
+            $( document ).ready(function() {
+                var $container = $('#videos').masonry({
+                    transitionDuration: 0,
+                    itemSelector: '.item',
+                    isFitWidth: true,
+                    stamp: '.stamp'
+                });
+            });
+                        
+        </script>
+    {% endblock %}
+
+    {% block main_body %}
+        <div class="main-body long">
+            <div id="videos" class="ui items">
+                <div id="videos-header" class="stamp">
+                    <img class="tf2logo" src="/resource/images/tf2videos/tf2videosbanner.png"/>
+                </div>
+                {% for video in videos %}
+                    <div class="item videos">
+                        <div class="video-content">
+                            <a class="name" href="http://www.youtube.com/watch?v={{ video['id'] }}"><i class="arrow right icon"></i>{{ video['title'] }}</a>
+                            <br/>
+                            <a href="http://www.youtube.com/watch?v={{ video['id'] }}">
+                                <img class="thumbnail" src="http://img.youtube.com/vi/{{ video['id'] }}/mqdefault.jpg"/>
+                            </a>
+                            <p>
+                            {% for i in video['desc'].split('\n') %}
+                            {{ i }}<br/>
+                           {% endfor %}
+                           </p>
+                       </div>
+
+                       <div class="video-stats">
+                           <div class="video-stats-left">
+                               {{ video['duration'] }}
+                           </div>
+                           <div class="divider"></div>
+
+                           <div class="video-stats-right">
+                               <span class="video-stats-count">{{ video['dislikes'] }}</span>
+                               <img class="video-stats-image" src="/resource/images/tf2videos/dislike.png"/>
+                           </div>
+                           <div class="video-stats-right">
+                               <span class="video-stats-count">{{ video['likes'] }}</span>
+                               <img class="video-stats-image" src="/resource/images/tf2videos/like.png"/>
+                           </div>
+                           <div class="video-stats-right">
+                               <span class="video-stats-count">{{ video['views'] }} </span>
+                               <img class="video-stats-image" src="/resource/images/tf2videos/views.png"/>
+                           </div>
+                       </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        {% endblock %}
